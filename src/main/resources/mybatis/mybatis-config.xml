@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+        <!-- 스네이크 케이스를 카멜 케이스로 자동 변환 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!-- TypeAlias 설정 -->
+    <typeAliases>
+        <package name="musinsa.test.codi.domain"/>
+    </typeAliases>
+
+    <!-- Mapper 설정 -->
+    <mappers>
+        <mapper resource="mybatis/mapper/admin/AdminBrandMapper.xml"/>
+        <mapper resource="mybatis/mapper/admin/AdminProductMapper.xml"/>
+        <mapper resource="mybatis/mapper/customer/ProductMapper.xml"/>
+    </mappers>
+
+</configuration>

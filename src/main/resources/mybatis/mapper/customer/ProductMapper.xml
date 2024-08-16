@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="musinsa.test.codi.customer.mapper.ProductMapper">
+
+    <resultMap id="productResultMap" type="musinsa.test.codi.customer.domain.Product">
+        <id property="productId" column="product_id"/>
+        <result property="price" column="price"/>
+        <association property="category" javaType="musinsa.test.codi.customer.domain.Category">
+            <result property="categoryName" column="category_name"/>
+        </association>
+        <association property="brand" javaType="musinsa.test.codi.customer.domain.Brand">
+            <result property="brandName" column="brand_name"/>
+        </association>
+    </resultMap>
+
+    <!-- 모든 제품 정보 조회 -->
+    <select id="findAllProducts" resultMap="productResultMap">
+        SELECT
+            p.product_id,
+            c.category_name,
+            b.brand_name,
+            p.price
+        FROM
+            product p
+        JOIN
+            category c ON p.category_id = c.category_id
+        JOIN
+            brand b ON p.brand_id = b.brand_id
+        ORDER BY
+            c.category_name, b.brand_name;
+    </select>
+
+</mapper>
