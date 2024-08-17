@@ -37,10 +37,11 @@ H2 DB 사용은 Optional로 쿼리 관련 기능은 최소화하여 구현했습
 - **빌드 도구:** Gradle
 
 ## 애플리케이션 실행
-1. Gradle 빌드
-2. Tomcat 실행
-3. 애플리케이션은 http://localhost:8080에서 시작합니다.
-4. h2 db 접속 : http://localhost:8080/h2-console
+1. main 브랜치 pull
+2. Gradle 클리어, 빌드
+3. 실행
+4. 애플리케이션은 http://localhost:8080에서 시작합니다.
+5. h2 db 접속 : http://localhost:8080/h2-console
    - jdbc url : jdbc:h2:mem:testdb
    - User Name : sa
    - Password : 
