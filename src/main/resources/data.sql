@@ -9,7 +9,7 @@ INSERT INTO brand (brand_name) VALUES
 ('H'),
 ('I');
 
-INSERT INTO category (category_name) VALUES
+INSERT INTO category (category_name) VALUES 
 ('상의'),
 ('아우터'),
 ('바지'),
@@ -19,8 +19,7 @@ INSERT INTO category (category_name) VALUES
 ('양말'),
 ('액세서리');
 
-
-INSERT INTO price (brand_id, category_id, price) VALUES
+INSERT INTO product (brand_id, category_id, price) VALUES
 (1, 1, 11200),
 (1, 2, 5500),
 (1, 3, 4200),
