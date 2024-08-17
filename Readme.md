@@ -3,6 +3,7 @@
 Musinsa Codi Service는 브랜드와 상품을 관리하고, 카테고리별 최저가 상품 및 브랜드 정보를 조회할 수 있는 API를 제공하는 서비스입니다. 
 이 서비스는 Spring Boot 기반으로 개발되었으며, MyBatis를 사용하여 데이터베이스와의 상호작용을 관리합니다. 
 Swagger UI를 통해 API 문서를 제공하며, H2 데이터베이스를 사용하여 간편한 테스트 환경을 제공합니다.
+H2 DB 사용은 Optional로 쿼리 관련 기능은 최소화하여 구현했습니다.
 
 ## 구현 범위
 ### 1. API 기능
@@ -31,7 +32,6 @@ Swagger UI를 통해 API 문서를 제공하며, H2 데이터베이스를 사용
 - `/swagger-ui/index.html` 경로에서 API 문서를 확인할 수 있습니다.
 
 ## Develop Environment
-
 - **Java 버전:** 21
 - **Spring Boot 버전:** 3.3.2
 - **빌드 도구:** Gradle
@@ -40,6 +40,13 @@ Swagger UI를 통해 API 문서를 제공하며, H2 데이터베이스를 사용
 1. Gradle 빌드
 2. Tomcat 실행
 3. 애플리케이션은 http://localhost:8080에서 시작합니다.
+4. h2 db 접속 : http://localhost:8080/h2-console
+   - jdbc url : jdbc:h2:mem:testdb
+   - User Name : sa
+   - Password : 
+
+# 테스트 코드
+- 각 서비스 Level 단위 테스트 진행
 
 ## 스웨거
 http://localhost:8080/swagger-ui/index.html
