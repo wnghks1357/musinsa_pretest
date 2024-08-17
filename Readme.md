@@ -46,7 +46,7 @@ H2 DB 사용은 Optional로 쿼리 관련 기능은 최소화하여 구현했습
    - Password : 
 
 # 테스트 코드
-- 각 서비스 Level 단위 테스트 진행
+- 각 서비스 Level 단위 및 통합 테스트 진행
 
 ## 스웨거
 http://localhost:8080/swagger-ui/index.html
