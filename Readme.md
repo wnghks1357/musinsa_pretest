@@ -1,9 +1,10 @@
 # 무신사 코디 서비스
 
-Musinsa Codi Service는 브랜드와 상품을 관리하고, 카테고리별 최저가 상품 및 브랜드 정보를 조회할 수 있는 API를 제공하는 서비스입니다. 
-이 서비스는 Spring Boot 기반으로 개발되었으며, MyBatis를 사용하여 데이터베이스와의 상호작용을 관리합니다. 
-Swagger UI를 통해 API 문서를 제공하며, H2 데이터베이스를 사용하여 간편한 테스트 환경을 제공합니다.
-H2 DB 사용은 Optional로 쿼리 관련 기능은 최소화하여 구현했습니다.
+Musinsa Codi Service는 브랜드 및 상품 관리를 위한 API를 제공하며, 카테고리별 최저가 상품 및 브랜드 정보를 
+손쉽게 조회할 수 있는 서비스입니다. 
+이 서비스는 Spring Boot를 기반으로 개발되었으며, 데이터베이스와의 상호작용은 MyBatis를 사용하여 처리합니다. 
+API 문서는 Swagger UI를 통해 제공되며, 
+선택적 사용 도구인 H2 데이터베이스 사용은 최소화하여 구현했습니다.
 
 ## 구현 범위
 ### 1. API 기능
@@ -31,25 +32,26 @@ H2 DB 사용은 Optional로 쿼리 관련 기능은 최소화하여 구현했습
 - Swagger를 사용하여 API 문서 및 테스트 UI를 제공합니다.
 - `/swagger-ui/index.html` 경로에서 API 문서를 확인할 수 있습니다.
 
-## Develop Environment
+## 개발 환경
 - **Java 버전:** 21
 - **Spring Boot 버전:** 3.3.2
 - **빌드 도구:** Gradle
 
 ## 애플리케이션 실행
-1. main 브랜치 pull
-2. Gradle 클리어, 빌드
-3. 실행
-4. 애플리케이션은 http://localhost:8080에서 시작합니다.
+1. Git에서 main 브랜치를 최신 상태로 pull 합니다.
+2. Gradle을 사용하여 프로젝트를 클린 빌드합니다.
+3. 애플리케이션을 실행합니다.
+4. 기본적으로 애플리케이션은 http://localhost:8080에서 시작됩니다.
 5. h2 db 접속 : http://localhost:8080/h2-console
    - jdbc url : jdbc:h2:mem:testdb
    - User Name : sa
    - Password : 
 
 # 테스트 코드
-- 각 서비스 Level 단위 및 통합 테스트 진행
+- 각 서비스에 대해 단위 테스트 및 통합 테스트가 포함되어 있습니다. 
+- 모든 기능에 대한 테스트 코드를 통해 서비스의 안정성을 보장합니다.
 
 ## 스웨거
-http://localhost:8080/swagger-ui/index.html
+- http://localhost:8080/swagger-ui/index.html
 
 
