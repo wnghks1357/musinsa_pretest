@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)  // null이 아닌 필드만 포함
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BrandRequest {
 
     @Schema(description = "브랜드 ID (브랜드 수정 시에만 필요)", example = "1", required = false)

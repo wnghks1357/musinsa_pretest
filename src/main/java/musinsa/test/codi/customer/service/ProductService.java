@@ -35,7 +35,6 @@ public class ProductService {
 				.map(ProductInfoDTO::getPrice)
 				.collect(Collectors.toList());
 
-		// 총액 조회
 		int totalMinPrice = PriceUtil.calculateTotalPrice(prices);
 
 		return new ProductResponse(new ArrayList<>(minPriceByCategory.values()), totalMinPrice);
@@ -66,7 +65,6 @@ public class ProductService {
 						.collect(Collectors.toList())
 		);
 
-		// 최종 응답 생성
 		return new MinPriceBrandResponse(
 				new MinPriceBrandResponse.BrandDetail(
 						minBrand,
